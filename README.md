@@ -1,7 +1,7 @@
 # react-block
 
 
-###USAGE
+### USAGE
 ```javascript
 import reactBlock from 'react-block';
 

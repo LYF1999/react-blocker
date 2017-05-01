@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LYF1999/react-block.git"
+    "url": "git+https://github.com/LYF1999/react-blocker.git"
   },
   "keywords": [
     "react",
@@ -20,9 +20,9 @@
   "author": "LYF1999",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LYF1999/react-block/issues"
+    "url": "https://github.com/LYF1999/react-blocker/issues"
   },
-  "homepage": "https://github.com/LYF1999/react-block#readme",
+  "homepage": "https://github.com/LYF1999/react-blocker#readme",
   "dependencies": {
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
