@@ -1,7 +1,8 @@
-# react-block
+# react-blocker
 
 
 ### USAGE
+You should ready this [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
 ```javascript
 import reactBlock from 'react-block';
 
