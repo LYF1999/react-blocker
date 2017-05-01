@@ -9,14 +9,11 @@ then....
 npm install react-blocker --save
 ```javascript
 
-import reactBlock from 'react-block';
+import reactBlocker from 'react-blocker';
 
 
-@reactBlock({ blockFunc: (props) => {
-  if (!props.user.isSuperuser) {
-    return (<div>you are blocked</div>);
-  }
-  // handle the props
+@reactBlocker({ blockFunc: () => {
+  return (<div>you are blocked</div>);
 } })
 class Example extends React.Component {
 
@@ -30,4 +27,5 @@ class Example extends React.Component {
 }
 
 render(<Example />, document.getElementById('root'));
+
 ```
