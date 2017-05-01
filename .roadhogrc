@@ -1,0 +1,21 @@
+{
+  "entry": "src/example/index.js",
+  "disableCSSModules": true,
+  "publicPath": "/",
+  "outputPath": "./static",
+  "extraBabelPlugins": [
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    }
+  }
+}
