@@ -12,8 +12,11 @@ npm install react-blocker --save
 import reactBlocker from 'react-blocker';
 
 
-@reactBlocker({ blockFunc: () => {
-  return (<div>you are blocked</div>);
+@reactBlocker({ blockFunc: (props) => {
+  if (!props.user.isSuperuser) {
+    return (<div>you are blocked</div>);
+  }
+  // you can do more here
 } })
 class Example extends React.Component {
 
