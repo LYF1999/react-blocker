@@ -3,7 +3,12 @@
 
 ### USAGE
 You should ready this [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
+
+then....  
+
+npm install react-blocker --save
 ```javascript
+
 import reactBlock from 'react-block';
 
 
