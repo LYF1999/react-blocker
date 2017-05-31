@@ -3,9 +3,11 @@ import { render } from 'react-dom';
 import reactBlocker from '../../index';
 
 
-@reactBlocker({ blockFunc: () => {
-  return (<div>you are blocked</div>);
-} })
+@reactBlocker({
+  componentWillMount() {
+    console.log(this);
+  },
+})
 class Example extends React.Component {
 
   render() {
