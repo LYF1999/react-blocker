@@ -7,9 +7,22 @@ export default function (args) {
       constructor(props) {
         super(props);
         if (typeof args === 'object') {
-          const { componentWillMount, componentWillReceiveProps } = args;
+          const {
+            componentWillMount,
+            componentWillReceiveProps,
+            componentDidMount,
+            shouldComponentUpdate,
+            componentWillUpdate,
+            componentDidUpdate,
+            componentWillUnmount,
+          } = args;
           this.componentWillMount = componentWillMount;
           this.componentWillReceiveProps = componentWillReceiveProps;
+          this.componentDidMount = componentDidMount;
+          this.shouldComponentUpdate = shouldComponentUpdate;
+          this.componentWillUpdate = componentWillUpdate;
+          this.componentDidUpdate = componentDidUpdate;
+          this.componentWillUnmount = componentWillUnmount;
         }
       }
 
