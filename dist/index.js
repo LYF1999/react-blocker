@@ -39,16 +39,51 @@ exports.default = function (args) {
         var _this = (0, _possibleConstructorReturn3.default)(this, (Blocker.__proto__ || (0, _getPrototypeOf2.default)(Blocker)).call(this, props));
 
         if ((typeof args === 'undefined' ? 'undefined' : (0, _typeof3.default)(args)) === 'object') {
-          var componentWillMount = args.componentWillMount,
-              componentWillReceiveProps = args.componentWillReceiveProps;
-
-          _this.componentWillMount = componentWillMount;
-          _this.componentWillReceiveProps = componentWillReceiveProps;
+          _this.addLifeCycle(args);
         }
         return _this;
       }
 
       (0, _createClass3.default)(Blocker, [{
+        key: 'addLifeCycle',
+        value: function addLifeCycle(lifecycle) {
+          var componentWillMount = lifecycle.componentWillMount,
+              componentWillReceiveProps = lifecycle.componentWillReceiveProps,
+              componentDidMount = lifecycle.componentDidMount,
+              shouldComponentUpdate = lifecycle.shouldComponentUpdate,
+              componentWillUpdate = lifecycle.componentWillUpdate,
+              componentDidUpdate = lifecycle.componentDidUpdate,
+              componentWillUnmount = lifecycle.componentWillUnmount;
+
+          if (componentWillMount) {
+            this.componentWillMount = componentWillMount;
+          }
+
+          if (componentWillReceiveProps) {
+            this.componentWillReceiveProps = componentWillReceiveProps;
+          }
+
+          if (shouldComponentUpdate) {
+            this.shouldComponentUpdate = shouldComponentUpdate;
+          }
+
+          if (componentWillUpdate) {
+            this.componentWillUpdate = componentWillUpdate;
+          }
+
+          if (componentDidUpdate) {
+            this.componentDidUpdate = componentDidUpdate;
+          }
+
+          if (componentDidMount) {
+            this.componentDidMount = componentDidMount;
+          }
+
+          if (componentWillUnmount) {
+            this.componentWillUnmount = componentWillUnmount;
+          }
+        }
+      }, {
         key: 'render',
         value: function render() {
           var result = null;

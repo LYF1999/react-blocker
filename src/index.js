@@ -7,21 +7,45 @@ export default function (args) {
       constructor(props) {
         super(props);
         if (typeof args === 'object') {
-          const {
-            componentWillMount,
-            componentWillReceiveProps,
-            componentDidMount,
-            shouldComponentUpdate,
-            componentWillUpdate,
-            componentDidUpdate,
-            componentWillUnmount,
-          } = args;
+          this.addLifeCycle(args);
+        }
+      }
+
+      addLifeCycle(lifecycle) {
+        const {
+          componentWillMount,
+          componentWillReceiveProps,
+          componentDidMount,
+          shouldComponentUpdate,
+          componentWillUpdate,
+          componentDidUpdate,
+          componentWillUnmount,
+        } = lifecycle;
+        if (componentWillMount) {
           this.componentWillMount = componentWillMount;
+        }
+
+        if (componentWillReceiveProps) {
           this.componentWillReceiveProps = componentWillReceiveProps;
-          this.componentDidMount = componentDidMount;
+        }
+
+        if (shouldComponentUpdate) {
           this.shouldComponentUpdate = shouldComponentUpdate;
+        }
+
+        if (componentWillUpdate) {
           this.componentWillUpdate = componentWillUpdate;
+        }
+
+        if (componentDidUpdate) {
           this.componentDidUpdate = componentDidUpdate;
+        }
+
+        if (componentDidMount) {
+          this.componentDidMount = componentDidMount;
+        }
+
+        if (componentWillUnmount) {
           this.componentWillUnmount = componentWillUnmount;
         }
       }

@@ -7,6 +7,9 @@ import reactBlocker from '../../index';
   componentWillMount() {
     console.log(this);
   },
+  blockFunc: () => {
+    return <div>blocked</div>;
+  }
 })
 class Example extends React.Component {
 
